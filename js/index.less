@@ -1,0 +1,596 @@
+@myLogo:"Sacramento";
+@myLogoFontsize:30px;
+@myLogoColor:pink;
+@baseColor:#fff;
+@offset:100px;
+@family:"Sacramento", Arial, serif;
+.border(@b:50%){
+  -webkit-border-radius: @b;
+  -moz-border-radius: @b;
+  -ms-border-radius:@b;
+  border-radius: @b;
+}
+.border-radius(@size){
+  -webkit-border-radius: @size;
+  -moz-border-radius: @size;
+  -ms-border-radius: @size;
+  border-radius: @size;
+}
+.fontStyle(@family,@fontColor){
+  font-family:@family ;
+  color:@fontColor;
+}
+.center(@t:0,@l:0,@r:0,@b:0){
+  top:@t;
+  left:@l;
+  right:@r;
+  bottom:@b;
+  margin:auto;
+}
+.boxpbm(@pd,@bw,@mb:20px){
+  padding: @pd;
+  border:@bw solid red;
+  margin-bottom: @mb;
+}
+.widthHeight(@a,@b){
+  width:@a;
+  height:@b;
+}
+*{
+  box-sizing:border-box;
+}
+html,body{margin:0;padding:0;overflow-x:hidden;}
+body{
+  font-family: "Work Sans", Arial, sans-serif;
+  font-weight: 400;
+  color: #828282;
+  margin:0;
+  padding:0;
+}
+ul,li{
+  list-style: none;
+  margin:0px;
+  padding:0px;
+}
+.text-center{
+  text-align: center;
+}
+//导航栏
+.my-logo{
+  display: inline-block;
+  height:42px;
+  margin-top:3px;
+}
+.my-caption{
+  position: relative;
+}
+.navbar{
+  position:fixed;
+}
+.my-logo{
+  font-family:@myLogo;
+  font-size:@myLogoFontsize;
+  color:@myLogoColor !important;
+}
+.header-top{
+  .widthHeight(100%,650px);
+  position:relative;
+  z-index:-9999;
+}
+//第一层
+.overlay{
+  z-index:0;
+  .center();
+  position:absolute;
+  background:rgba(0,0,0,0.5);
+}
+.topSize{
+  margin-top:50px;
+}
+.f1-first h2{
+  color:@baseColor;
+}
+.f1-first-size{
+  font-family: @family;
+  color:@baseColor;
+  margin-top:@offset;
+  font-size:120px;
+}
+@media screen and(max-width:768px){
+  .f1-first-size{
+    font-size:80px;
+  }
+}
+.small-top{
+  margin-top:@myLogoFontsize;
+}
+.simply-section {
+  display: inline-block;
+  .widthHeight(100px,100px);
+  background: rgba(241, 78, 149, 0.8);
+  margin: 0 4px;
+  .border();
+  position: relative;
+  animation: pulse 1s ease infinite;
+}
+.simply-section p{
+  font-size:0.8em;
+  margin-top:10px;
+  color:@baseColor;
+}
+.simply-section p:nth-child(1){
+  font-size:30px;
+}
+.btn{
+  margin-top:60px;
+  padding: 15px 20px;
+  background: #fff !important;
+  color: #F14E95;
+  border: none !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius:30px;
+}
+//第二层
+.fh5co-couple{
+  margin-top:100px;
+}
+.fh5co-heading h2{
+  font-size: 60px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-weight: bold;
+  .fontStyle("Sacramento",#F14E95);
+}
+.fh5co-heading h3{
+  color: #000;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+.fh5co-heading p{
+  font-size: 18px;
+  line-height: 1.5;
+  color: #828282;
+}
+.couple-wrap{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.couple-half{
+  float:left;
+  width:50%;
+}
+.groom{
+  float: right;
+  margin-right: 5px;
+}
+.img-responsive{
+  .border();
+  .widthHeight(150px,150px);
+  display: block;
+  max-width: 100%;
+}
+.couple-half .desc-groom {
+  padding-right: 180px;
+  text-align: right;
+}
+.couple-half h3{
+  .fontStyle("Sacramento",#F14E95);
+  font-size: 30px;
+}
+.couple-half .bride {
+  float: left;
+  margin-left: 5px;
+}
+.couple-half .desc-bride{
+  padding-left: 180px;
+  text-align: left;
+}
+.heart {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  animation: pulse 1s ease infinite;
+}
+.heart i {
+  font-size: 20px;
+  background: #fff;
+  padding: 20px;
+  color: #F14E95;
+  .border()
+}
+//第三层
+#fh5co-event{
+  margin-top:100px;
+  height:750px;
+  overflow: hidden;
+  position:relative;
+}
+.eventDownf1 {
+  margin-top:100px;
+}
+.eventDownf1 span{
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 13px;
+}
+.eventDownf1 h2{
+  font-size: 75px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-weight: bold;
+  .fontStyle("Sacramento",#F14E95);
+}
+.display-t{
+  .widthHeight(100%,700px);
+  display: table;
+}
+.event-wrap{
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  width: 100%;
+  float: left;
+  .border-radius(4px);
+  color:@baseColor;
+  font-size:20px;
+  box-sizing:border-box;
+}
+.event-col{
+  margin-top:30px;
+  width:50%;
+  float:left;
+  margin-bottom:30px;
+}
+.f3-inner{
+  margin-top:30px;
+}
+//第四层
+#fh5co-gallery{
+  clear:both;
+  padding-top:7em;
+  background:rgba(0,0,0,0.04)
+}
+.f4-list{
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.f4-list li{
+  width:32.3%;
+  display: block;
+  padding: 0;
+  margin: 0 0 10px 1%;
+  min-height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  clear: left;
+  position: relative;
+  .border-radius(7px);
+}
+.f4-list li a{
+  min-height: 400px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.f4-list li a:before{
+  .border-radius(4px);
+  content:"";
+  position:absolute;
+  .center();
+  background:rgba(0,0,0,0.2)
+}
+.f4-list li a:hover{
+  background:rgba(0,0,0,0.4);
+  .border-radius(4px);
+}
+.f4-list li a .img-size{
+  width: auto;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  position: absolute;
+  z-index: 100;
+  color:@baseColor;
+}
+//第五层
+#fh5co-couple-story{
+  padding:7em 0;
+  clear:both;
+}
+.fh5co-heading span{
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+}
+.timeline{
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+//时间轴线
+.timeline:before{
+  top: 0;
+  bottom: 0;
+  height:800px;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  background-color: #d4d4d4;
+  left: 50%;
+  margin-left: 0px;
+}
+//解决高度问题
+.timeline:after,.timeline:before{
+  content:"";
+  display:table;
+}
+.timeline > li > .timeline-badge {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #fff;
+  .widthHeight(160px,160px);
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -80px;
+  background-color: #999999;
+  z-index: 100;
+  .border-radius(50%);
+}
+.timeline > li > .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  padding: 30px;
+  position: relative;
+  .border-radius(4px);
+}
+.displayborder(@a,@b,@c,@d,@null,@disp:inline-block){
+  border-top:@a;
+  border-left: @b;
+  border-right:@c;
+  border-bottom:@d;
+  display:@disp;
+  content:@null;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 80px;
+  right: -15px;
+  .displayborder(15px solid transparent,15px solid #ccc,0 solid #ccc,15px solid transparent,"");
+}
+.timeline > li{
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 81px;
+  right: -14px;
+  .displayborder(14px solid transparent,14px solid #fff,0 solid #fff,14px solid transparent,"");
+}
+.date{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #828282
+}
+.timeline-title{
+    color:#000;
+ }
+.jiantou(@a,@b,@c:0,@d:auto){
+  border-right-width:@a;
+  left:@b;
+  border-left-width:@c;
+  right:@d;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+   float: right;
+ }
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  .jiantou(15px,-15px);
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  .jiantou(14px,-14px);
+}
+//f6
+.fh5co-bg{
+  background-image: url(../images/img_bg_5.jpg);
+  height:600px;
+  position:relative;
+}
+.feature-center{
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.icon{
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+  background: #efefef;
+  display: table;
+  margin: 200px auto 0 auto;
+  .border-radius(50%);
+}
+.icon i{
+  height:70px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 40px;
+  line-height: 40px;
+  color: #F14E95;
+}
+.counter{
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 100;
+  display: block;
+}
+.counter-label{
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: .1em;
+}
+//footer
+footer{
+  margin:70px 0 30px 0;
+}
+.fh5co-social-icons li{
+  display:inline-block;
+}
+.fh5co-social-icons li a i{
+  color:#F14E95;
+  font-size:20px;
+  padding-left:10px;
+  padding-right:10px;
+}
+@media screen and(max-width:1000px){
+  .desc-groom p,.desc-bride p{
+    display: none !important;
+  }
+  .timeline:before,.timeline:after{
+    float:left;
+    left:0;
+    margin-left:50px;
+  }
+  .timeline > li > .timeline-badge{
+    .widthHeight(100px,100px);
+    margin-left: 0;
+    top: 48px;
+    float:left;
+    left:0;
+  }
+  .timeline > li > .timeline-panel {
+    width: 77%;
+    float: right;
+  }
+  .timeline > li> .timeline-panel:before {
+    .jiantou(15px,-15px);
+  }
+  .timeline > li > .timeline-panel:after {
+    .jiantou(14px,-14px);
+  }
+}
+@media screen and(max-width:768px){
+  .fh5co-bg{
+    height:900px;
+  }
+  .timeline:before{
+    height:900px;
+  }
+  .eventDownf1 h2{
+    font-size:3em;
+  }
+  #fh5co-event{
+    height:750px;
+  }
+  .f4-list li{
+    width:49%;
+  }
+  .img-size h2{
+    font-size:1.5em;
+  }
+  .simply-section p{
+    font-size:16px;
+  }
+  .timeline > li > .timeline-panel {
+    float: right;
+  }
+  .timeline > li> .timeline-panel:before {
+    .jiantou(15px,-15px);
+  }
+  .timeline > li > .timeline-panel:after {
+    .jiantou(14px,-14px);
+  }
+}
+@media screen and(max-width:500px){
+  .counter{
+    font-size:30px;
+  }
+  .counter-label{
+    font-size:10px;
+  }
+  .img-size h2{
+    font-size:1.3em;
+  }
+  .f4-list li{
+    width:100%;
+  }
+  .max-width-circle{
+    width:50%;
+    margin-top:20px;
+  }
+  .f1-first-size{
+    font-size:50px;
+  }
+  .header-top{
+    height:750px;
+  }
+  .img-responsive{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .heart {
+    position: absolute;
+    top: 2.8em;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    animation: pulse 1s ease infinite;
+  }
+  #fh5co-event{
+    height:950px;
+  }
+  .event-col p{
+    font-size: 16px;
+  }
+  .timeline:before,.timeline:after{
+    float:left;
+    left:0;
+    margin-left:40px;
+  }
+  .timeline > li > .timeline-badge{
+    .widthHeight(60px,60px);
+    margin-left: 0;
+    top: 63px;
+    float:left;
+    left:0;
+  }
+  .timeline > li > .timeline-panel{
+    width: 70%;
+    float: right;
+  }
+  .timeline p{
+    font-size:14px;
+  }
+}
+img{
+  max-width: 100%;
+}
